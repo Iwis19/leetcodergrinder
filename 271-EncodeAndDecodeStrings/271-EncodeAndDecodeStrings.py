@@ -5,7 +5,7 @@ class Solution:
         """
         did not solve on first submission, tried using delimiter but turned out i had to also include the length of the word.
 
-        NOTE: it's also easier if i have delimiter after the length of subsequent word as i can just start reading after the delimiter
+        NOTE: its best to have delimiter after the length, as i can just pick up where i left off from i pointer all the way to j pointer, handling ANY digit for words length
         """
 
         encoded = ""

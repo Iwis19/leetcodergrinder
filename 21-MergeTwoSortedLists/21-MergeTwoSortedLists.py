@@ -7,6 +7,15 @@
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
 
+        """
+        LEARNED from solution:
+        1. forgot to use a current ptr for the linkedlist to move and keep a dummy, i kinda just moved thru w the dummy node
+        2. make list = list.next anyways since itll just go to None (i forgot it did sooooo, but thats exactly what i want bc i checked if the node exists or not, and if it doesnt, it goes to 101 which is out of val boundsd)
+        3. move the list node to next after so that loop would actrually go through
+
+        3 ms runtime (beats 13%) | 19 mb memory (beats 88%)
+        """
+        
         new_list = ListNode(-1)
         curr = new_list
 

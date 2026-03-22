@@ -1,5 +1,18 @@
 # Last updated: 3/22/2026, 6:09:02 PM
 class Solution:
+
+    """
+    LEARN from solution:
+    1. i used a helper function :)
+    2. learned a method: lstrip() -> strips leading whitespaces, rstrip() -> strips trailing whitespaces, strip() does both
+    3. consider edge cases, sequencing is very important
+    4. how to clamp numbers with min , max. -> max(INT_MIN, min(INT_MAX, myInput))
+    5. use ord() for ascii better
+
+    3 ms runtime beats 36% |  19 mb memory beats 91%
+    O(N^2)....
+    """
+    
     #checks string version
     def isNumber(self, s:str) -> bool:
 

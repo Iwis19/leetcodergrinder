@@ -2,6 +2,15 @@
 class Solution:
     def reverse(self, x: int) -> int:
 
+        """
+        LEARNED from solution:
+        actualyl not a bad solution, learned from 8.atoi about dealing with clamping and traversing through i think
+        1. my chud head didnt think that i could scan negative sign and then move i to 1 more
+        2. using power was a good idea i liked it
+
+        43 ms runtime beats 75% | 19 mb memory beats 85%
+        """
+        
         s = str(x)
 
         output = 0

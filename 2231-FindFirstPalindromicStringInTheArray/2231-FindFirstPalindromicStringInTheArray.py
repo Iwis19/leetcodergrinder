@@ -11,7 +11,7 @@ class Solution:
 
         def isPalindromic(string:str) -> bool:
 
-            return True if string == string[::-1] else False
+            return string == string[::-1] 
 
         for word in words:
 

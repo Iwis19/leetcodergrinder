@@ -1,22 +1,17 @@
-# Last updated: 3/27/2026, 1:48:13 PM
+# Last updated: 3/27/2026, 3:00:08 PM
 1class Solution:
-2    def twoSum(self, nums: List[int], target: int) -> List[int]:
-3        
-4        """
-5        1. two pass hash is used here, but one pass hash also works here because if i was on index 0 and the valid complement was index 2, i dont need to worry that i didnt find it as ill see my index 0 in my hash when im at index 2
-6        """
-7
-8        map = {}
+2    def threeSum(self, nums: list[int]) -> list[list[int]]:
+3        res = set()
+4        n = len(nums)
+5
+6        for i in range(n - 2):
+7            seen = set()
+8            target = -nums[i]
 9
-10        for i,num in enumerate(nums):
-11            map[num] = i
-12
-13        for index, current in enumerate(nums):
-14
-15            complement = target - current
-16            if complement in map and index != map[complement]:
-17
-18                return [index, map[complement]]
-19
-20        return []
-21
+10            for j in range(i + 1, n):
+11                complement = target - nums[j]
+12                if complement in seen:
+13                    res.add(tuple(sorted((nums[i], nums[j], complement))))
+14                seen.add(nums[j])
+15
+16        return [list(t) for t in res]

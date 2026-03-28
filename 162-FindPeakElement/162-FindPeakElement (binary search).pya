@@ -1,0 +1,36 @@
+class Solution:
+    def findPeakElement(self, nums: List[int]) -> int:
+
+        """
+        binary search, there are three cases for the middle val:
+        - leftside of the peak (nums[mid] < nums[mid+1]) -> search space is rightside
+        - is the peak -> return value
+        - rightside of the peak (nums[mid] < nums[mid-1]) -> our peak element search space is leftside 
+
+        0ms runtime 100%
+        """
+        
+        n = len(nums)
+
+        if n == 1: return 0
+        if nums[0] > nums[1]: return 0
+        if nums[n-1] > nums[n-2]: return n-1
+
+        start, end = 1, n-2
+
+        while (start <= end):
+
+            mid = start + (end - start)//2
+            if nums[mid] > nums[mid+1] and nums[mid] > nums[mid-1]: 
+                return mid 
+
+            #binary search part
+            elif nums[mid] < nums[mid+1]: 
+                # i can move it this way because if the slope is increasing, then there must be a peak to the right since were moving righy
+                start = mid + 1
+            elif nums[mid] < nums[mid-1]: 
+                # i entirely ignore that right half of the current interval because if slope is decreasing, then there must be a peak on that left side since were moving right
+                end = mid - 1
+
+        return None
+        

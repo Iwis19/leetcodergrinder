@@ -2,20 +2,20 @@ class Solution:
     def threeSum(self, nums: list[int]) -> list[list[int]]:
         
         nums.sort()
-        res = set()
+        res = []
 
         def all_two_sum(arr, target):
 
             left = 0
             right = len(arr)-1
 
-            res = set()
+            res = []
 
             while left < right:
 
                 sum = arr[left] + arr[right]
                 if sum == target:
-                    res.add((arr[left], arr[right]))
+                    res.append([arr[left], arr[right])
                     left += 1
                     right -= 1
                 elif sum < target:
@@ -23,7 +23,7 @@ class Solution:
                 elif sum > target:
                     right -= 1
 
-            return [list(r) for r in res]
+            return res
         
         for i, num in enumerate(nums):
 
@@ -31,9 +31,9 @@ class Solution:
             remaining = nums[i+1:]
             results = all_two_sum(remaining, target)
             for result in results:
-                res.add((num, result[0], result[1]))
+                res.append([num, result[0], result[1])
             
-        return [list(r) for r in res]
+        return res
 
 
 

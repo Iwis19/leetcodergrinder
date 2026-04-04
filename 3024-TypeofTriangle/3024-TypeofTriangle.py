@@ -1,4 +1,4 @@
-# Last updated: 4/3/2026, 11:10:13 AM
+# Last updated: 4/3/2026, 9:35:31 PM
 1class Solution:
 2    def triangleType(self, nums: List[int]) -> str:
 3        

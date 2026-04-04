@@ -1,13 +1,12 @@
-# Last updated: 4/3/2026, 9:35:31 PM
+# Last updated: 4/3/2026, 9:37:00 PM
 1class Solution:
-2    def triangleType(self, nums: List[int]) -> str:
+2    def findWordsContaining(self, words: List[str], x: str) -> List[int]:
 3        
-4        if nums[0] >= nums[1] + nums[2] or nums[1] >= nums[0] + nums[2] or nums[2] >= nums[0] + nums[1]:
-5            return "none"
-6
-7        if nums[0] == nums[1] == nums[2]:
-8            return "equilateral"
-9        if nums[0] == nums[1] or nums[1] == nums[2] or nums[2] == nums[0]:
-10            return "isosceles"
-11        else:
-12            return "scalene"
+4        res = []
+5
+6        for i, word in enumerate(words):
+7
+8            if x in word:
+9                res.append(i)
+10
+11        return res

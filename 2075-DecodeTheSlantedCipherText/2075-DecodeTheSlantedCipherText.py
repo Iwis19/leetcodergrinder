@@ -4,7 +4,7 @@ class Solution:
         """
         very happy with myself :)
 
-        111 ms beats 70
+        111 ms beats 70 - c++ submissions are way better,so i am already optimized
         """
 
         s = []

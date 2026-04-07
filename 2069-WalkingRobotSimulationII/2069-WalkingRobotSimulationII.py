@@ -14,11 +14,11 @@ class Robot:
         self.w = width
         self.h = height
         self.move = [[0,1], [1,0], [0,-1], [-1,0]]
-        self.perimeter = cycle = 2 * (self.w + self.h) - 4
+        self.perimeter = 2 * (self.w + self.h) - 4
 
 
     def step(self, num: int) -> None:
-        x,y = self.getPos()
+        x,y = self.pos
        
         num %= self.perimeter
         if num == 0:

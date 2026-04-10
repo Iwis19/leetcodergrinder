@@ -1,5 +1,6 @@
 goals:
 
+- greedy 
 - finish up on bfs dfs binary trees
 - bitwise ops
 - brush up on heaps queues stacks and how to implement

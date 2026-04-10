@@ -8,6 +8,14 @@ class Solution:
         2. but forgot values() existed but i def need to rmb it more, including items() and keys()
         3. was lost on how to keep track if i even have 3 valid good values to find closest dist, thought abt using a separate var, but this is more efficient
 
+        saw from a discussion, kind of a math probloem actually:
+        - sorted indices for example a,b,c where a<b<c:
+        - (a-b) + (b-c) + (c-a)
+        - (b-a) + (c-b) + (c-a)
+        - b + c + c - a - b - a
+        - 2c - 2a
+        - 2(c-a)
+
         0 ms runtime beats 100
         """
         

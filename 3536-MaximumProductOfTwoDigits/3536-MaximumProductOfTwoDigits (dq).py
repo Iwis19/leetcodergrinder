@@ -6,7 +6,7 @@ class Solution:
 
         took a long time but in my defence i was not locked in and i was looking at keyboards
 
-        realized to use a stack myself, took some time to think of how to select top 2 digits while saving some tc / computations
+        realized to use a dq myself, took some time to think of how to select top 2 digits while saving some tc / computations
 
         in solutions, i like the freq array the most, will try do to that now !
 

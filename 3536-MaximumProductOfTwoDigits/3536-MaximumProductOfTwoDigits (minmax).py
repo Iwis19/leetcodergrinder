@@ -2,17 +2,7 @@ class Solution:
     def maxProduct(self, n: int) -> int:
 
         """
-        geeg bro i am trash now after like 3 weeks
-
-        took a long time but in my defence i was not locked in and i was looking at keyboards
-
-        realized to use a dq myself, took some time to think of how to select top 2 digits while saving some tc / computations
-
-        in solutions, i like the freq array the most, will try do to that now !
-
-        ADDED NOTE: good to note that n itself is positive , the nature of this question eliminates the possibility of negative x negative for an extra case
-
-        no more dq ! even tho tc is down this is cleaner
+        did this at the end after seeing 7/26 daily msol
 
         0 ms runtime beats 100%
         """

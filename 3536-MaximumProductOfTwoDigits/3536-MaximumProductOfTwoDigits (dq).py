@@ -10,22 +10,24 @@ class Solution:
 
         in solutions, i like the freq array the most, will try do to that now !
 
+        ADDED NOTE: good to note that n itself is positive , the nature of this question eliminates the possibility of negative x negative for an extra case
+
+        no more dq ! even tho tc is down this is cleaner
+
         0 ms runtime beats 100%
         """
         
         l = int(math.log(n, 10)) + 1
-        nums = deque([0, 0])
+        a, b = -1, -1
 
         for _ in range(l):
             dig = n % 10
             n //= 10
 
-            if dig >= nums[-1]:
-                nums.append(dig)
-                nums.popleft()
-            elif dig >= nums[-2]:
-                nums.insert(1, dig)
-                nums.popleft()
+            ta = a
 
-        return nums[-1] * nums[-2]
+            a = max(a, dig)
+            b = max(b, min(ta, dig))
+
+        return a * b
             

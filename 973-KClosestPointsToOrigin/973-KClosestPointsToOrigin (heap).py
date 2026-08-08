@@ -9,6 +9,8 @@ class Solution:
         heap works at logn speed for operations, so its more like nlogk instead of nlogn
 
         there is still a faster way (quickselect) but will see later.
+
+        54 ms runtime beats 63%
         """
         
         h = []

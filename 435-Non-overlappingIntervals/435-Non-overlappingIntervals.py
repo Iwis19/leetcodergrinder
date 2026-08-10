@@ -1,5 +1,15 @@
 class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+
+        """
+        adding this here because i undersstood the problem finalyl
+
+        the question is asking to just keep all intervals that do not coexist as another, and remove minimally
+
+        i originally thought you have to keep the biggest interval that was given in the problem and make them connect...
+        
+        68 ms runtime beats 77%
+        """
         
         res = 0
         intervals.sort(key=lambda x:x[1])
@@ -25,8 +35,6 @@ class Solution:
         if i sort by first element, i have non overlapping intervals which wont be maximum, which in turn will result in my result not being minimum despite being a valid result for removal.
 
         test on [ [1,100] , [11,22] , [1,11] , [2,12] ]
-
-        68 ms runtime beats 77%
         """
 
         prev_end = intervals[0][1]
